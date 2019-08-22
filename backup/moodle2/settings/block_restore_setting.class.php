@@ -15,17 +15,22 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * Version details
+ * Extends the restore settings class to control layout of the checkbox.
  *
  * @package    block_opencast
- * @copyright  2017 Andreas Wagner, SYNERGY LEARNING
+ * @copyright  2018 Andreas Wagner, SYNERGY LEARNING
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 defined('MOODLE_INTERNAL') || die();
 
-$plugin->version = 2019052900;
-$plugin->requires = 2017111300;
-$plugin->maturity  = MATURITY_STABLE;
-$plugin->release   = 'v3.7-r1'; // First release for Moodle 3.7.
-$plugin->component = 'block_opencast';
-$plugin->dependencies = array('tool_opencast' => 2018102900);
+global $CFG;
+
+require_once($CFG->dirroot . '/blocks/opencast/backup/moodle2/settings/block_backup_setting.class.php');
+/**
+ * Extends the restore settings class.
+ *
+ * @package    block_opencast
+ * @copyright  2018 Andreas Wagner, SYNERGY LEARNING
+ * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
+ */
+class restore_block_opencast_setting extends \backup_block_opencast_setting {}

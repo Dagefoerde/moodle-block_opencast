@@ -15,7 +15,7 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * Tasks of block opencast.
+ * Scheduled tasks of block opencast.
  *
  * @package    block_opencast
  * @copyright  2017 Andreas Wagner, SYNERGY LEARNING

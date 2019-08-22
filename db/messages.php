@@ -15,17 +15,19 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * Version details
+ * Message providers for block opencast.
  *
- * @package    block_opencast
- * @copyright  2017 Andreas Wagner, SYNERGY LEARNING
- * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
+ * @package   block_opencast
+ * @copyright 2018 Andreas Wagner, Synergy Learning
+ * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 defined('MOODLE_INTERNAL') || die();
 
-$plugin->version = 2019052900;
-$plugin->requires = 2017111300;
-$plugin->maturity  = MATURITY_STABLE;
-$plugin->release   = 'v3.7-r1'; // First release for Moodle 3.7.
-$plugin->component = 'block_opencast';
-$plugin->dependencies = array('tool_opencast' => 2018102900);
+$messageproviders = array(
+    'error' => [
+        'defaults' => [
+            'popup' => MESSAGE_PERMITTED + MESSAGE_DEFAULT_LOGGEDIN,
+            'email' => MESSAGE_PERMITTED + MESSAGE_DEFAULT_LOGGEDOFF,
+        ]
+    ]
+);
